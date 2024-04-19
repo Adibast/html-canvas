@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML5 Canvas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background verga">
+    <div class="background-element"></div>
+  </div>
+  <div class="hero">
+    <div class="container">
+      <div class="canvas-container">
+        <canvas id="draw" ></canvas>
+      </div>
+      <div class="menu">
+        <div class="title"></div>
+        <div class="menu-element">
+          <label for="color-picker" class="color-label">Select a color</label>
+          <input type="color" id="color-picker" value="#000000">
+        </div>
+        <div class="menu-element">
+          <label for="rainbow-color-button">Rainbow mode:</label>
+          <button id="rainbow-color-button">Off</button>
+        </div>
+        <div class="menu-element">
+          <label class="size-label">Size selector<br> current:<span class="size-number"></span></label>
+          <div id="slidercontainer">
+            <input type="range" min="1" max="100" value="50" class="slider">
+          </div>
+        </div>
+        <div class="menu-element">
+          <label for="automatic-size">Automatic size:</label>
+          <button id="automatic-size">Off</button>
+        </div>
+        <form class="effects-list-form">
+          <label for="effects-list">Special effects:</label>
+          <select id="effects-list" name="effects">
+            <option class="option" value="" >Effects list</option>
+            <option class="option" value="source-over" >Default (source-over)</option>
+            <option class="option" value="destination-over" >Destination-over</option>
+            <option class="option" value="lighter" >Lighter</option>
+            <option class="option" value="xor" >Xor</option>
+            <option class="option" value="multiply" >Multiply</option>
+            <option class="option" value="screen" >Screen</option>
+            <option class="option" value="overlay" >Overlay</option>
+            <option class="option" value="darken" >Darken</option>
+            <option class="option" value="lighten" >Lighten</option>
+            <option class="option" value="color-dodge" >Color-dodge</option>
+            <option class="option" value="color-burn" >Color-burn</option>
+            <option class="option" value="hard-light" >Hard-light</option>
+            <option class="option" value="soft-light" >Soft-light</option>
+            <option class="option" value="difference" >Difference</option>
+            <option class="option" value="exclusion" >Exclusion</option>
+            <option class="option" value="hue" >Hue</option>
+            <option class="option" value="saturation" >Saturation</option>
+            <option class="option" value="color" >Color</option>
+            <option class="option" value="luminosity" >Luminosity</option>
+          </select>
+        </form>
+        <form class="effects-description">
+          <label for="description" class="effect-title"></label>
+          <p id="description"></p>
+        </form>
+      </div>
+    </div>
+    <div class="credit">
+      <p class="text">Made by Adibast</p>
+    </div>
+  </div>
+  <script type="application/javascript" src="script.js"></script>
+</body>
+</html>
